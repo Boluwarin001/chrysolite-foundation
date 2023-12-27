@@ -12,7 +12,7 @@ a{
 
 .nav{
 	width: 100%;
-	box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+/*	box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);*/
 	position: fixed;
 	background: #fff;
 	z-index: 2;
@@ -204,7 +204,7 @@ a{
 .rev-left-pad{
 	padding-left: 30%;
 	padding-right: 20%;
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 .rev-right{
@@ -304,6 +304,10 @@ a{
 	max-width: 80%;
 	margin: auto;
 	background: #333;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 160px;
+	border-bottom-left-radius: 200px;
 }
 
 .section4-title{
@@ -314,11 +318,23 @@ a{
 }
 
 .section4-text{
-	width: 700px;
-	max-width: 80%;
+/*	width: 700px;*/
+/*	max-width: 80%;*/
 	margin: auto;
 	margin-top: 20px;
 	text-align: center;
+}
+
+.section4-flex{
+	display: flex;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.section4-section{
+	width: 33.3%;
+	margin: 20px;
 }
 
 /*END SECTION 4*/
@@ -399,6 +415,130 @@ a{
 }
 
 
+/*2019-2023*/
+/*BLOG*/
+
+.blog-header1{
+	font-size: 150px;
+	text-align: center;
+	padding-top: 150px;
+	font-family: 'Playfair Display', serif;
+	background: linear-gradient(90deg, #000 0%, #0E6D7A 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.blog-header2{
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+}
+
+.blog-content{
+	padding-top: 50px;
+	padding-bottom: 200px;
+	width: 90%;
+	font-size: 18px;
+	max-width: 800px;
+	margin: auto;
+	line-height: 1.7em;
+	letter-spacing: 0.01em;
+}
+
+.block-2{
+	display: flex;
+	align-items: center;
+}
+
+.block-2 div{
+	margin: 20px;
+}
+
+.next-prev{
+	margin-top: 100px;
+	border-bottom: 1px dashed grey;
+	display: flex;
+	justify-content: space-between;
+}
+
+.next-prev-active{
+	font-weight: bolder;
+}
+
+
+
+
+/*DONATE*/
+.donate-title{
+	font-size: 60px;
+	line-height: 1em;
+	font-family: 'Playfair Display', serif;
+	background: linear-gradient(90deg, #000 0%, #0E6D7A 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+.donate-flex{
+	display: flex;
+	padding: 150px 10%;
+}
+
+.donate-left, .donate-right{
+	margin: 20px;
+	width: 50%;
+}
+
+
+
+/*TEAM*/
+
+.team-container{
+	display: flex;
+	margin: auto;
+	max-width: 1100px;
+	width: 90%;
+/*	background: red;*/
+	margin-top: 100px;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.team-item{
+/*	max-width: 300px;*/
+	text-align: center;
+	margin: 40px 10px;
+	width: 25%;
+}
+
+.team-img{
+	width: 100%;
+	height: 360px;
+	margin-bottom: 10px;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 20px;
+}
+
+.team-name{
+	font-family: 'Playfair Display';
+	font-size: 20px;
+}
+
+.team-role{
+	font-weight: bolder;
+}
+
+.team-txt{
+	font-size: 14px;
+	padding: 10px;
+}
+
+
 
 /*#####################################*/
 /*#####################################*/
@@ -443,6 +583,11 @@ a{
 	padding-top: 40px;
 }
 
+
+.team-item{
+	width: 45%;
+}
+
 }
 
 
@@ -474,6 +619,35 @@ a{
 
 .footer-flex div{
 	width: 50%;
+}
+
+
+}
+
+
+@media only screen and (max-width: 750px) {
+.section4-flex{
+	display: block;
+}
+.section4-section{
+	width: auto;
+}
+
+
+.blog-header1{
+	font-size: 100px;
+}
+
+.block-2 div{
+	margin: 5px;
+}
+
+.donate-flex{
+	display: block;
+}
+.donate-left, .donate-right{
+	width: 90%;
+	margin: 20px 0;
 }
 
 
@@ -580,6 +754,15 @@ a{
 
 .rev-thumb{
 	height: 250px;
+}
+
+.team-img{
+	height: 300px;
+}
+
+.team-item{
+	width: 45%;
+	margin: 20px 0px;
 }
 
 }
