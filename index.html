@@ -21,6 +21,7 @@
 </head>
 <body>
 
+	<nav>
 	<div class="nav">
 	<div class="nav-pad">
 
@@ -30,19 +31,59 @@
 			<div>CHYSOLITE<br>FOUNDATION</div>
 			</a>
 		</div>
-
-		<div class="nav-right">
-			<div><a href="https://www.instagram.com/_chrysoliteng/"><i class='bx bxl-instagram'></i></a></div>
-			<div><i class='bx bxl-facebook'></i></div>
+		<div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+		<!--div class="nav-right"-->
+			<div class="nav-links">
+				<a href="index.html"><div class="nav-focus">Home</div></a>
+				<a href="about.html">About Us</a>
+				<a href="https://wa.me/c/2349127480531">Merchandize</a>
+				<a href="https://medium.com/@thechrysolitefoundation">Blog</a>
+				<a href="https://wa.me/2349127480531">Contact Us</a>
+				<a href="donate.html"><button class="btn">Donate</button></a>
+			</div>
+			<!--a href="">
+			<div class="nav-home">
+				<div class="nav-focus">
+				Home
+			</div>
+			</div></a>
+			<a href="about.html">
+			<div class="nav-about">
+				About Us
+			</div></a>
+			<a href="https://wa.me/c/2349127480531">
+			<div class="nav-merch">
+				Merchandize
+			</div></a>
+			<a href="https://medium.com/@thechrysolitefoundation">
+			<div class="nav-blog">
+				Blog
+			</div></a>
+			<a href="contact.html">
+			<div class="nav-contact">
+				Contact Us
+			</div></a>
 			<a href="donate.html">
 			<div class="nav-donate">
-				DONATE
+				<button class="btn">DONATE</button>
 			</div>
-			</a>
-		</div>
+			</a-->
+		<!--/div-->
 		
 	</div>
 	</div>
+	</nav>
+
+	<script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 
 	<!-- SECTION 1 -->
@@ -52,8 +93,13 @@
 		<div class="hero-left">
 			<div class="hero-title">Live, Love,</div>
 			<div class="hero-title">Empower.</div>
-			<div class="hero-text">Chrysolite Foundation is an NGO set to advance the welfare of the future generations through
-empowerment and education.</div>
+			<div class="hero-text">We are advancing the welfare of the future generations through
+empowerment and education.</div><br>
+			<div class="hero-btn">
+				<a href="https://forms.gle/rnznQtbkyPHyweDm6">
+					<button class="btn">Join Us</button>
+				</a>
+			</div>
 		</div>
 		<div class="hero-right">
 			<div class="hero-img">
@@ -69,14 +115,60 @@ empowerment and education.</div>
 
 	<div class="section2">
 	<div class="section2-pad">
-		<div class="section2-title">AWON ALA ME WULO <br> "My dreams are valid"</div>
-		<div class="section2-text">We are grateful to celebrate 500+ people empowered over the past 4 years</div>
+		<div class="carousel">
+			<div class="carousel-item active">Mo ni'gboyá <br> "I Am Brave"</div>
+			<div class="carousel-item">Mi O Y'odeE <br> "I Am not Dumb"</div>
+			<div class="carousel-item">Mo Dángájíá/Lágbára <br> "I am Capable"</div>
+			<div class="carousel-item">Ojó iwájú mi dára<br> "My Future is Bright"</div>
+			<div class="carousel-item">AWON ALA ME WULO <br> "My Dreams are Valid"</div>
+			<div class="carousel-footer">
+				We are grateful to celebrate 500+ people empowered over the past 4 years
+			</div>
+		</div>
 	</div>
 	</div>
 
+	<script>
+        const items = document.querySelectorAll(".carousel-item");
+        let currentIndex = 0;
+        const intervalTime = 6000; // 6 seconds
+
+        function showNextItem() {
+            // Hide the current item
+            items[currentIndex].classList.remove("active");
+
+            // Move to the next item
+            currentIndex = (currentIndex + 1) % items.length;
+
+            // Show the next item
+            items[currentIndex].classList.add("active");
+        }
+
+        // Initialize the carousel
+        setInterval(showNextItem, intervalTime);
+    </script>
 	<!-- END SECTION 2 -->
-
-
+	 
+	<!--Special blog post start-->
+	<div>
+		<div class="blog">
+			<div class="blog_img">
+				<img class="blogjpg" src="assets/images/blog.jpg">
+			</div>
+			<div class="blog-title" id="blog-title">
+				REACHING FOR THE STARS: TILL THE FIFTH & BEYOND (A volunteer’s POV)
+			</div><br>
+			<div class="rev-content" id="rev-content">
+			<div class="blog-body" id="rev-text">
+				<p>Make no mistake. This is not just a story of one woman. It is a story of a dream fuelled by the passion of this one woman and supported by hundreds of other people.<br>
+					Thus, the Chrysolite Foundation came into being in December, 2019. A team composed of mostly young university students, burdened with the task of empowering children and young adults in low-income communities with needed skills for intellectual growth and development.<br>
+					Each outreach meant that many stars had to be reached and polished. Every strategy, every teardrop, and every single naira spent resulted in a great profit for our stars; our profit was seeing the resulting smiles, satisfaction, growth and self-confidence.</p><br>
+					<button class="btn"><a href="https://medium.com/@thechrysolitefoundation/reaching-for-the-stars-till-the-fifth-beyond-83f47651cd79">Read More</a></button>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!--Special blog post end-->
 
 
 
@@ -91,12 +183,9 @@ empowerment and education.</div>
 
 			<div class="rev-title" id="rev-title">Our History</div>
 			<div class="rev-content" id="rev-content">
-			We began our work in December 2019 with a 2-day project. 
-			<br>
-			The first day was a workshop with the residents of Cheshire Home where we taught crafting of paper bags. 
-			<br>
-			The second day was a visit to a juvenile home in Sango, Ibadan where we donated basic foodstuff
-			and clothing. Since then we've been taking up more projects all for the empowerment and education of children and young adults.
+			<div class="rev-text" id="rev-text"><p>We began our work in December 2019 and have since then been committed to providing young people in underprivileged communities with access to empowerment and education opportunities.</p><br>
+			<!--button class="btn"><a href=" ">Read More</a></button-->
+			</div>
 			</div>
 			
 		</div>
@@ -115,6 +204,14 @@ empowerment and education.</div>
 				<div class="glide">
 				  <div class="glide__track glide-track" id="glide__track" data-glide-el="track">
 				    <div class="glide__slides">
+
+						<!--div class="glide__slide">
+							<a href="2023.html">
+							<div class="rev-thumb" style="background: #333 url(assets/images/2023.jpg) center;background-size: cover;">
+							</div>
+							<div class="rev-thumb-title">2024</div>
+							</a>
+						</div-->
 
 				      <div class="glide__slide">
 				      	<a href="2023.html">
@@ -194,7 +291,7 @@ empowerment and education.</div>
 
 	<!-- START SECTION 4 -->
 	<div class="section4">
-		<div class="section4-video" style="background: url(assets/images/team.jpg) center;background-size: cover;"></div>
+		<div class="section4-video" style="background: url(assets/images/outreach.jpg) center;background-size: cover;"></div>
 
 		<div class="section4-flex">
 				
@@ -227,7 +324,6 @@ empowerment and education.</div>
 	<!-- END SECTION 4 -->
 
 
-
 	<!-- START SECTION 5 -->
 	<div class="section5">
 	<div class="section5-pad">
@@ -241,25 +337,40 @@ empowerment and education.</div>
 				Make Impact
 			</div>
 			<a href="donate.html"><button class="btn">Donate</button></a>
-			<button class="btn">Volunteer</button>
+			<a href="https://forms.gle/rnznQtbkyPHyweDm6"><button class="btn">Volunteer</button></a>
 		</div>
 	</div>
 	</div>
 	<!-- END SECTION 5 -->
 
 
+	<!--START SECTION 6>
+	<div class="section6">
+		<div style="text-align: center;" class="section6-title">
+			Our Partners
+		</div>
+		<div class="wrapper">
+			<div class="item item1"></div>
+			<div class="item item2"></div>
+			<div class="item item3"></div>
+			<div class="item item4"></div>
+			<div class="item item5"></div>
+			<div class="item item6"></div>
+			<div class="item item7"></div>
+			<div class="item item8"></div>
+		  </div>
+
+	</div><br><br><br>
+	<END SECTION 6-->
 
 
-	<!--  -->
-	<!--  -->
+	<!-- Start SECTION7>
+	<div class="donate-label">Stay updated with our projects? Join our mailing list <a href="donate.html">Donate now</a></div>
+	<br><br>
+	<END SECTION7 -->
 	<!-- FOOTER -->
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 
-	<div class="donate-label">Would you like to support us? <a href="donate.html">Donate now</a></div>
+	
 
 	<div class="footer">
 	<div class="footer-pad">
@@ -276,14 +387,26 @@ empowerment and education.</div>
 			<br>
 		</div>
 
-		<div>
-			<b>Contact</b>
+		<div class="footer1stcolumn" style="text-align: center;">
+			<b><a href="about.html">About Us</a></b>
 			<br>
-			<br>
-			<br>
-			Instagram: 
-			<br>
-			<a target="_blank" href="https://www.instagram.com/_chrysoliteng/">@_chrysoliteng</a><br>
+			<a href="#">Team</a>
+				<a href="#">Projects</a><br>
+				<a href="#">History</a><br>
+				<a href="#">Gallery</a>
+				</div>
+				
+				<div class="footer2ndcolumn" style="text-align: center;">
+					<b>More</b>
+					<br>
+					<a href="https://wa.me/c/2349127480531">Merch</a><br>
+						<a href="donate.html">Donate</a><br>
+						<a href="https://forms.gle/rnznQtbkyPHyweDm6">Volunteer</a><br>
+						<a href="https://medium.com/@thechrysolitefoundation">Blog</a>
+						</div>
+
+
+				<!--a target="_blank" href="https://www.instagram.com/_chrysoliteng/">@_chrysoliteng</a><br>
 
 			<br>
 			Phone:<br> 
@@ -295,10 +418,10 @@ empowerment and education.</div>
 			<br>
 
 			Email:<br>
-			<a href="mailto:thechrysolitefoundation@gmail.com" style="font-size: 14px;">thechrysolitefoundation@gmail.com</a>
+			<a href="mailto:thechrysolitefoundation@gmail.com" style="font-size: 14px;">thechrysolitefoundation@gmail.com</a-->
 		</div>
 
-		<div>
+		<!--div class="footer2ndcolumn">
 			<b>Pages</b>
 			<br>
 			<br>
@@ -319,7 +442,7 @@ empowerment and education.</div>
 			<a href="2021.html">2021</a><br>
 			<a href="2020.html">2020</a><br>
 			<a href="2019.html">2019</a><br>
-		</div>
+		</div-->
 
 		</div>
 
@@ -328,9 +451,7 @@ empowerment and education.</div>
 		<br>
 		<br>
 		<br>
-		<div style="text-align: center;">All Rights Reserved. 2023</div>
-		<br>
-		<br>
+		<div style="text-align: center;">All Rights Reserved. 2024</div>
 		
 	</div>
 	</div>
